@@ -37,7 +37,6 @@ public class Board {
     }
 
     public Board(String FEN){
-        long startTime, endTime;
         whitePieces = new HashSet<>();
         blackPieces = new HashSet<>();
         buttonGrid = new GridPane();

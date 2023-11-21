@@ -23,30 +23,8 @@ public class Game {
         Long startTime, split1, endTime;
         layout = new Pane();
 
-        board = new Board("rnbq1rk1/2p2ppp/p4n2/1p1pp3/1b2P3/2NPBN2/PPP1BPPP/R2Q1RK1 w - 0 1");
-        board.getMoves();
-        System.out.println("Run: ");
-        ArrayList<Move> moves;
-        int totalMovesChecked = 0;
-        startTime = System.nanoTime();
         board = new Board();
-        board.getMoves();
-        board.move(new Move(board.getPiece(4, 6), 4, 4));
-        /*split1 = System.nanoTime();
-        board.getMoves();
-        for(int i = 0; i < 100; ++i){
-            moves = board.getMoves();
-            for (Move move : moves) {
-                board.move(move);
-                board.unmove();
-            }
-            board.move(moves.get(0));
-            totalMovesChecked += moves.size();
-        }*/
-        endTime = System.nanoTime();
-        //System.out.println(String.format("  New Board: %d microseconds\n", (split1-startTime)/1000));
-        //System.out.println(String.format("  Checked 100 Positions (AVG Moves: %d): %d microseconds\n", totalMovesChecked/100, (endTime-split1)/1000));
-
+        
         Rectangle banner = new Rectangle(0, 0, board.getWidth(), 60);
         banner.setFill(Color.LIGHTBLUE);
 
